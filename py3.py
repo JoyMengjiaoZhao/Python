@@ -552,6 +552,9 @@ empty_tuple=tuple()
 
 empty_set=set()
 
+empty_dict=dict() #empty dict
+#empty_dict[key]=value #defination
+
 #Dictionary
 student={'name':'John','age':25,'courses':['Math','CompSci']}
 print(student['name'])
@@ -752,4 +755,91 @@ os.chdir('/Users/joyzhao/Desktop/Allfiles')
 print(os.getcwd())
 for f in os.listdir():
     print(f)
+
+###Generators
+
+#def square_number(nums):
+#    for i in nums:
+#        yield(i*i)
+
+#my_nums=square_number([1,2,3,4,5])
+
+my_nums=(x*x for x in [1,2,3,4,5])
+
+print (my_nums)
+print (list(my_nums))
+
+for num in my_nums:
+    print(num)
+
+##decorators
+def outer_functions():
+    message='Hi'
+    def inner_function():
+        print(message)
+    return inner_function()
+outer_functions()
+
+def outer_function():
+    message='Hi'
+    def inner_function():
+        print(message)
+    return inner_function  #a function waitting to be excuated
+my_func=outer_function()
+my_func()
+
+def outer_function(msg):
+    message=msg
+    def inner_function():
+        print(message)
+    return inner_function
+hi_func=outer_function('hi')
+bye_func=outer_function('bye')
+hi_func()
+bye_func()
+
+#decorator
+def decorator_function(original_function):    #option one for decoration :function
+    def wrapper_function(*args,**kwargs):
+        print('wrapper executed this before {}'.format(original_function.__name__))
+        return original_function(*args,**kwargs)
+    return wrapper_function
+
+#class decorator_class(object):   #option two for decoration :class
+#    def __init__(self,original_function):
+#        self.original_function=original_function
+#    def __call__(self,*args,**kwargs):
+#        print('call method executed this before {}'.format(self.original_function.__name__))
+#        return self.original_function(*args,**kwargs)
+
+@decorator_function  #decorator signal
+#@decorator_class
+# equal: decorated_display=decorator_function(display)
+def display():
+    print('display function ran')
+
+#decorated_display=decorator_function(display)
+#decorated_display()
+@decorator_function
+#@decorator_class
+def display_info(name,age):
+    print('display_info ran with arguments({},{})'.format(name,age))
+
+display_info('John',25)
+display()
+
+#####Namedtuple
+from collections import namedtuple
+color=(55,155,255)  #tuple
+print (color[0])
+color={'red':55,'green':155,'blue':255}
+print(color['red'])
+
+Color=namedtuple('Color',['red','green','blue'])
+color=Color(55,155,255)
+color=Color(red=55,green=155,blue=255)
+print(color.red)
+print (color[0])
+
+
 

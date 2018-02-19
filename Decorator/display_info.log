@@ -1,0 +1,14 @@
+INFO:root:Ran with args: ('John', 25), and kwargs: {}
+INFO:root:Ran with args: ('John', 26), and kwargs: {}
+INFO:root:Ran with args: ('John', 26), and kwargs: {}
+INFO:root:Ran with args: ('John', 26), and kwargs: {}
+INFO:root:Ran with args: ('John', 26), and kwargs: {}
+INFO:root:Ran with args: ('John', 26), and kwargs: {}
+INFO:root:Ran with args: ('Joy', 26), and kwargs: {}
+INFO:root:Ran with args: ('John', 26), and kwargs: {}
+INFO:root:Ran with args: ('Joy', 26), and kwargs: {}
+INFO:root:Ran with args: ('John', 26), and kwargs: {}
+INFO:root:Ran with args: ('Joy', 26), and kwargs: {}
+INFO:root:Ran with args: ('John', 26), and kwargs: {}
+INFO:root:Ran with args: ('Joy', 26), and kwargs: {}
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
