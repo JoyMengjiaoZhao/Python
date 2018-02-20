@@ -1,5 +1,7 @@
+import requests
 class Employee:
     """A sample Employee class"""
+    raise_amt=1.05
 
     def __init__(self,first, last,pay):
         self.first=first
@@ -13,5 +15,12 @@ class Employee:
     def fullname(self):
         return '{} {}'.format(self.first,self.last)
 
-emp_1=Employee('Chen','Mu',60000)
-emp_2=Employee('Hong','Xiao',70000)
+    def apply_raise(self):
+        self.pay=int(self.pay*self.raise_amt)
+
+    def monthly_schedule(self,month):
+        response=requests.get('http://company.com/{}/{}'.format(self.last,month))
+        if response.ok:
+            return response.text
+        else:
+            return'Bad Response!'

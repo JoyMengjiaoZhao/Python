@@ -1,0 +1,15 @@
+2018-02-19 17:18:43,472:DEBUG:Add: 20 + 10 = 30
+2018-02-19 17:18:43,472:DEBUG:Sub: 20 - 10 = 10
+2018-02-19 17:18:43,472:DEBUG:Mul: 20 * 10 = 200
+2018-02-19 17:18:43,472:DEBUG:Div: 20 / 10 = 2.0
+2018-02-19 17:23:18,431:ERROR:Tried to divide by zero
+2018-02-19 17:24:03,475:ERROR:Tried to divide by zero
+Traceback (most recent call last):
+  File "/Users/joyzhao/PycharmProjects/py/log/Advancedlog sample.py", line 36, in divide
+    result=x/y
+ZeroDivisionError: division by zero
+2018-02-19 17:26:45,692:ERROR:Tried to divide by zero
+Traceback (most recent call last):
+  File "/Users/joyzhao/PycharmProjects/py/log/Advancedlog sample.py", line 39, in divide
+    result=x/y
+ZeroDivisionError: division by zero

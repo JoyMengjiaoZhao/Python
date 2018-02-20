@@ -1,4 +1,6 @@
-import logging
+import logging #like a diary to see each run situation
+# (some need not to be displayed but to check
+# wheteher it is correctly ran or not)
 
 # DEBUG: Detailed information, typically of interest only when diagnosing problems.
 
@@ -11,7 +13,7 @@ import logging
 # CRITICAL: A serious error, indicating that the program itself may be unable to continue running.
 
 logging.basicConfig(filename='test.log', level=logging.DEBUG,
-                    format='%(asctime)s:%(levelname)s:%(message)s')
+                    format='%(asctime)s:%(levelname)s:%(message)s') #log file format
 
 
 def add(x, y):
